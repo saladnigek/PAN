@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pantheos RPG - An immersive MMORPG adventure awaits. Join thousands of players in this epic pixel-art gaming experience.">
+    <meta name="keywords" content="MMORPG, RPG, online game, Pantheos, pixel art game">
+    <meta name="author" content="Pantheos RPG Team">
+    <title>Pantheos RPG - MMORPG Adventure</title>
+    
+    <!-- Preconnect to external resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-to-main">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="header-container">
+            <a href="#" class="logo" aria-label="Pantheos RPG Home">
+                <img src="logo.png" alt="Pantheos RPG Logo">
+            </a>
+            <nav role="navigation" aria-label="Main navigation">
+                <ul class="nav-links pixel-font">
+                    <li><a href="#overview">OVERVIEW</a></li>
+                    <li><a href="#download">DOWNLOAD</a></li>
+                    <li><a href="#news">NEWS</a></li>
+                    <li><a href="#contact">CONTACT US</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="login-btn pixel-font" aria-label="Login to your account">LOG IN</a>
+            <div class="user-profile-container" id="userProfileContainer">
+                <button class="profile-btn" id="profileBtn" aria-label="User profile menu" aria-expanded="false">
+                    <img src="profile.png" alt="User profile picture" class="profile-pic" id="headerProfilePic">
+                    <span class="dropdown-arrow" aria-hidden="true">▼</span>
+                </button>
+                <div class="profile-dropdown" id="profileDropdown" role="menu">
+                    <div class="dropdown-header">
+                        <div class="dropdown-username" id="dropdownUsername">Username</div>
+                    </div>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" id="profileSettingsLink" role="menuitem">⚙️ Profile Settings</a></li>
+                        <li><button class="logout-btn" id="logoutBtn" role="menuitem">➡️ Logout</button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero" aria-label="Welcome banner">
+            <div class="hero-content loading">
+                <h1 class="hero-title pixel-font">WELCOME TO PANTHEOS</h1>
+                <p class="hero-subtitle pixel-font">An MMORPG Adventure Awaits</p>
+                <a href="#overview" class="learn-more-btn pixel-font btn-pulse">LEARN MORE</a>
+            </div>
+        </section>
+
+        <!-- Game Overview Section -->
+        <section id="overview" class="section overview-section" aria-labelledby="overview-title">
+            <div class="section-container loading">
+                <h2 id="overview-title" class="section-title pixel-font">Game Overview</h2>
+                <div class="overview-content">
+                    <article class="overview-item loading">
+                        <h3>The Story</h3>
+                        <p>
+                            In the mystical realm of Pantheos, ancient powers have awakened, threatening the balance of the
+                            world.
+                            As a chosen hero, you must gather allies, master powerful abilities, and restore peace to the
+                            land.
+                            Your journey begins in the pixelated landscapes where every choice shapes your destiny.
+                        </p>
+                    </article>
+
+                    <article class="overview-item loading">
+                        <h3>Gameplay Mechanics</h3>
+                        <ul>
+                            <li><strong>Character Progression:</strong> Level up your character through quests, battles, and
+                                exploration</li>
+                            <li><strong>Class System:</strong> Choose from multiple classes, each with unique abilities and
+                                play-styles</li>
+                            <li><strong>Combat System:</strong> Strategic turn-based combat with pixel-perfect animations
+                            </li>
+                            <li><strong>Guild System:</strong> Join or create guilds to tackle challenging group content
+                            </li>
+                            <li><strong>Economy:</strong> Trade, craft, and build your wealth in a player-driven economy
+                            </li>
+                        </ul>
+                    </article>
+
+                    <article class="overview-item loading">
+                        <h3>Progression Systems</h3>
+                        <ul>
+                            <li><strong>Skill Trees:</strong> Customize your character with branching skill paths</li>
+                            <li><strong>Equipment:</strong> Discover and upgrade powerful gear with unique pixel-art designs
+                            </li>
+                            <li><strong>Reputation:</strong> Build your standing with different factions and NPCs</li>
+                            <li><strong>Achievements:</strong> Unlock special rewards and titles for your accomplishments
+                            </li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Download Section -->
+        <section id="download" class="section" aria-labelledby="download-title">
+            <div class="section-container loading">
+                <h2 id="download-title" class="section-title pixel-font">Download Client</h2>
+                <div class="download-content">
+                    <p class="section-text loading">
+                        Ready to begin your adventure? Download the official Pantheos Windows client and join thousands of
+                        players
+                        in this epic MMORPG experience!
+                    </p>
+                    <a href="#" class="download-btn pixel-font loading" id="downloadBtn" role="button">Download For Windows</a>
+
+                    <div class="requirements loading">
+                        <h3 class="section-subtitle">System Requirements</h3>
+                        <ul>
+                            <li><strong>OS:</strong> Windows 10/11 (64-bit)</li>
+                            <li><strong>Processor:</strong> Intel Core i3 or AMD equivalent</li>
+                            <li><strong>Memory:</strong> 4 GB RAM</li>
+                            <li><strong>Graphics:</strong> DirectX 11 compatible graphics card</li>
+                            <li><strong>Storage:</strong> 2 GB available space</li>
+                            <li><strong>Network:</strong> Broadband internet connection</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Section -->
+        <section id="news" class="section" aria-labelledby="news-title">
+            <div class="section-container loading">
+                <h2 id="news-title" class="section-title pixel-font">News & Updates</h2>
+                <p class="section-text loading">
+                    Stay informed about the latest developments, patches, and community events in Pantheos!
+                </p>
+                <div class="news-grid">
+                    <article class="news-card loading">
+                        <div class="news-header">
+                            <div class="news-icon update-icon" aria-hidden="true"></div>
+                            <div class="news-content">
+                                <h3>Version 1.8.0 - "Mystic Realms" Update</h3>
+                                <time class="news-date" datetime="2024-12-15">December 15, 2024</time>
+                            </div>
+                        </div>
+                        <div class="news-image">
+                            <img src="Quest.png" alt="Mystic Realms Update featuring new quests" class="news-featured-image" loading="lazy">
+                        </div>
+                        <p class="news-description">
+                            Explore new mystical realms with enhanced graphics, new quests, and powerful artifacts waiting
+                            to be discovered.
+                        </p>
+                    </article>
+                    
+                    <article class="news-card loading">
+                        <div class="news-header">
+                            <div class="news-icon event-icon" aria-hidden="true"></div>
+                            <div class="news-content">
+                                <h3>Winter Festival Event</h3>
+                                <time class="news-date" datetime="2024-12-10">December 10, 2024</time>
+                            </div>
+                        </div>
+                        <div class="news-image">
+                            <img src="Winter.png" alt="Winter Festival Event with festive decorations" class="news-featured-image" loading="lazy">
+                        </div>
+                        <p class="news-description">
+                            Join the annual Winter Festival with special events, exclusive rewards, and festive decorations
+                            throughout the realm.
+                        </p>
+                    </article>
+                    
+                    <article class="news-card loading">
+                        <div class="news-header">
+                            <div class="news-icon dev-icon" aria-hidden="true"></div>
+                            <div class="news-content">
+                                <h3>Developer Q&A Session</h3>
+                                <time class="news-date" datetime="2024-12-05">December 5, 2024</time>
+                            </div>
+                        </div>
+                        <p class="news-description">
+                            Our development team answers community questions about upcoming features and game balance
+                            changes.
+                        </p>
+                    </article>
+                    
+                    <article class="news-card loading">
+                        <div class="news-header">
+                            <div class="news-icon maintenance-icon" aria-hidden="true"></div>
+                            <div class="news-content">
+                                <h3>Server Maintenance Complete</h3>
+                                <time class="news-date" datetime="2024-12-01">December 1, 2024</time>
+                            </div>
+                        </div>
+                        <p class="news-description">
+                            All servers are back online with improved stability and performance optimizations for better
+                            gameplay experience.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section" aria-labelledby="contact-title">
+            <div class="section-container loading">
+                <h2 id="contact-title" class="section-title pixel-font">Get in Touch</h2>
+                <div class="contact-container loading">
+                    <div class="contact-content">
+                        <div class="contact-info">
+                            <h3 class="pixel-font">Connect With Us</h3>
+                            <p>Have questions, feedback, or want to collaborate? We'd love to hear from you!</p>
+                            <div class="contact-methods">
+                                <a href="mailto:contact@pantheos4c.com" class="contact-method">
+                                    <div class="contact-icon email-icon" aria-hidden="true">✉</div>
+                                    <span>contact@pantheos4c.com</span>
+                                </a>
+                                <a href="#" class="contact-method">
+                                    <div class="contact-icon discord-icon-contact" aria-hidden="true"></div>
+                                    <span>Join our Discord</span>
+                                </a>
+                            </div>
+                        </div>
+                        <form class="contact-form" aria-label="Contact form">
+                            <div class="form-group">
+                                <label for="contact-name" class="sr-only">Your Name</label>
+                                <input type="text" id="contact-name" class="form-input" placeholder="Your Name" required aria-required="true">
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-email" class="sr-only">Your Email</label>
+                                <input type="email" id="contact-email" class="form-input" placeholder="example@gmail.com" required aria-required="true">
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-message" class="sr-only">Your Message</label>
+                                <textarea id="contact-message" class="form-input form-textarea" placeholder="Your Message" required aria-required="true"></textarea>
+                            </div>
+                            <button type="submit" class="send-btn pixel-font">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h4 class="pixel-font">About Pantheos</h4>
+                <ul>
+                    <li><a href="#overview">Game Overview</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4 class="pixel-font">Support</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Forums</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#">Server Status</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4 class="pixel-font">Legal</h4>
+                <ul>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4 class="pixel-font">Connect</h4>
+                <ul>
+                    <li><a href="#" class="social-link">
+                            <span class="social-icon discord-icon" aria-hidden="true"></span>
+                            Discord
+                        </a></li>
+                    <li><a href="#" class="social-link">
+                            <span class="social-icon facebook-icon" aria-hidden="true"></span>
+                            Facebook
+                        </a></li>
+                    <li><a href="#" class="social-link">
+                            <span class="social-icon youtube-icon" aria-hidden="true"></span>
+                            Youtube
+                        </a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2024 Pantheos RPG. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Login/Signup Modal -->
+    <div id="loginModal" class="modal" role="dialog" aria-labelledby="login-modal-title" aria-modal="true">
+        <div class="modal-content">
+            <div class="modal-header" role="tablist">
+                <button class="modal-tab active pixel-font" id="loginTab" role="tab" aria-selected="true" aria-controls="loginForm">LOGIN</button>
+                <button class="modal-tab inactive pixel-font" id="signupTab" role="tab" aria-selected="false" aria-controls="signupForm">SIGNUP</button>
+            </div>
+            <div class="modal-body">
+                <!-- Login Form -->
+                <div id="loginForm" role="tabpanel" aria-labelledby="loginTab">
+                    <form aria-label="Login form">
+                        <div class="form-group-modal">
+                            <label for="loginUsername" class="sr-only">Username or Email</label>
+                            <input type="text" id="loginUsername" class="form-input-modal" placeholder="Username or Email" required aria-required="true">
+                        </div>
+                        <div class="form-group-modal">
+                            <div class="password-container">
+                                <label for="loginPassword" class="sr-only">Password</label>
+                                <input type="password" id="loginPassword" class="form-input-modal" placeholder="Password" required aria-required="true">
+                                <button type="button" class="password-toggle" onclick="togglePassword('loginPassword')" aria-label="Toggle password visibility">👁</button>
+                            </div>
+                        </div>
+                        <button type="button" class="modal-btn pixel-font" onclick="handleLogin()">LOGIN</button>
+                        <div class="forgot-password">
+                            <a href="#" id="forgotPasswordLink">Forget Password?</a>
+                        </div>
+                        <div class="social-login">
+                            <p>Or Login Using</p>
+                            <a href="#" class="google-btn" aria-label="Login with Google">
+                                <span class="google-icon" aria-hidden="true"></span>
+                                Google
+                            </a>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Signup Form -->
+                <div id="signupForm" style="display: none;" role="tabpanel" aria-labelledby="signupTab">
+                    <form aria-label="Signup form">
+                        <div class="form-group-modal">
+                            <label for="signupUsername" class="sr-only">Username</label>
+                            <input type="text" id="signupUsername" class="form-input-modal" placeholder="Username" required aria-required="true">
+                        </div>
+                        <div class="form-group-modal">
+                            <label for="signupEmail" class="sr-only">Email</label>
+                            <input type="email" id="signupEmail" class="form-input-modal" placeholder="Email" required aria-required="true">
+                        </div>
+                        <div class="form-group-modal">
+                            <div class="password-container">
+                                <label for="signupPassword" class="sr-only">Password</label>
+                                <input type="password" id="signupPassword" class="form-input-modal" placeholder="Password" required aria-required="true">
+                                <button type="button" class="password-toggle" onclick="togglePassword('signupPassword')" aria-label="Toggle password visibility">👁</button>
+                            </div>
+                        </div>
+                        <div class="form-group-modal">
+                            <div class="password-container">
+                                <label for="confirmPassword" class="sr-only">Confirm Password</label>
+                                <input type="password" id="confirmPassword" class="form-input-modal" placeholder="Confirm Password" required aria-required="true">
+                                <button type="button" class="password-toggle" onclick="togglePassword('confirmPassword')" aria-label="Toggle password visibility">👁</button>
+                            </div>
+                        </div>
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="termsCheckbox" required aria-required="true">
+                            <label for="termsCheckbox">I Agree To The <a href="#" id="tosLink" style="color: #2563eb; text-decoration: underline;">Terms Of Service</a> And <a href="#" id="privacyLink" style="color: #2563eb; text-decoration: underline;">Privacy Policy</a></label>
+                        </div>
+                        <button type="button" class="modal-btn pixel-font" onclick="handleSignup()">SIGNUP</button>
+                        <div class="social-login">
+                            <p>Or Login Using</p>
+                            <a href="#" class="google-btn" aria-label="Signup with Google">
+                                <span class="google-icon" aria-hidden="true"></span>
+                                Google
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Forgot Password Modal -->
+    <div id="forgotPasswordModal" class="modal" role="dialog" aria-labelledby="forgot-password-title" aria-modal="true">
+        <div class="modal-content" style="max-width: 450px;">
+            <div class="modal-header" style="background-color: #3985C1; border-radius: 12px 12px 0 0; padding: 1.5rem; text-align: center;">
+                <h2 id="forgot-password-title" class="pixel-font" style="color: white; margin: 0; font-size: 1.2rem;">RESET PASSWORD</h2>
+            </div>
+            <div class="modal-body">
+                <!-- Step 1: Enter Email -->
+                <div id="forgotPasswordStep1" style="display: block;">
+                    <p style="text-align: center; color: #374151; margin-bottom: 1.5rem;">Enter your email address and we'll send you a verification code to reset your password.</p>
+                    <div id="forgotErrorMsg" role="alert" style="display: none; background-color: #fee2e2; border: 1px solid #ef4444; color: #dc2626; padding: 0.75rem; border-radius: 6px; margin-bottom: 1rem; text-align: center; font-size: 0.9rem;"></div>
+                    <div class="form-group-modal">
+                        <label for="forgotEmail" class="sr-only">Email Address</label>
+                        <input type="email" id="forgotEmail" class="form-input-modal" placeholder="Enter your email" required aria-required="true">
+                    </div>
+                    <button class="modal-btn pixel-font" id="sendCodeBtn">SEND CODE</button>
+                    <div style="text-align: center; margin-top: 1rem;">
+                        <a href="#" id="backToLoginLink" style="color: #6b7280; text-decoration: none; font-size: 0.9rem;">← Back to Login</a>
+                    </div>
+                </div>
+                <!-- Step 2: Enter Verification Code -->
+                <div id="forgotPasswordStep2" style="display: none;">
+                    <p style="text-align: center; color: #374151; margin-bottom: 1rem;">A verification code has been sent to your email.</p>
+                    <p style="text-align: center; color: #2563eb; font-weight: bold; margin-bottom: 1.5rem;">Please check your email and enter the code below.</p>
+                    <div id="resetErrorMsg" role="alert" style="display: none; background-color: #fee2e2; border: 1px solid #ef4444; color: #dc2626; padding: 0.75rem; border-radius: 6px; margin-bottom: 1rem; text-align: center; font-size: 0.9rem;"></div>
+                    <div class="form-group-modal">
+                        <label for="verificationCode" class="sr-only">Verification Code</label>
+                        <input type="text" id="verificationCode" class="form-input-modal" placeholder="Enter 6-digit code" maxlength="6" required aria-required="true">
+                    </div>
+                    <div class="form-group-modal">
+                        <div class="password-container">
+                            <label for="newPasswordReset" class="sr-only">New Password</label>
+                            <input type="password" id="newPasswordReset" class="form-input-modal" placeholder="New Password" required aria-required="true">
+                            <button type="button" class="password-toggle" onclick="togglePassword('newPasswordReset')" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer;" aria-label="Toggle password visibility">👁</button>
+                        </div>
+                    </div>
+                    <div class="form-group-modal">
+                        <div class="password-container">
+                            <label for="confirmPasswordReset" class="sr-only">Confirm New Password</label>
+                            <input type="password" id="confirmPasswordReset" class="form-input-modal" placeholder="Confirm New Password" required aria-required="true">
+                            <button type="button" class="password-toggle" onclick="togglePassword('confirmPasswordReset')" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer;" aria-label="Toggle password visibility">👁</button>
+                        </div>
+                    </div>
+                    <button class="modal-btn pixel-font" id="resetPasswordBtn">RESET PASSWORD</button>
+                    <div style="text-align: center; margin-top: 1rem;">
+                        <a href="#" id="backToLoginLink2" style="color: #6b7280; text-decoration: none; font-size: 0.9rem;">← Back to Login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Profile Settings Modal -->
+    <div id="profileSettingsModal" class="profile-settings-modal" role="dialog" aria-labelledby="profile-settings-title" aria-modal="true">
+        <div class="profile-settings-content">
+            <div class="profile-settings-header">
+                <h2 id="profile-settings-title" class="pixel-font">PROFILE SETTINGS</h2>
+            </div>
+            <div class="profile-settings-body">
+                <div class="profile-pic-section">
+                    <img src="profile.png" alt="Profile Picture" class="profile-pic-large" id="profilePicLarge">
+                    <br>
+                    <input type="file" id="profilePicInput" accept="image/*" style="display: none;" aria-label="Upload profile picture">
+                    <button class="change-pic-btn" id="changePicBtn">Change Profile Picture</button>
+                </div>
+                <form id="profileSettingsForm" aria-label="Profile settings form">
+                    <div class="settings-form-group">
+                        <label for="settingsUsername">Username</label>
+                        <input type="text" id="settingsUsername" class="settings-form-input" placeholder="Enter new username" required aria-required="true">
+                    </div>
+                    <div class="settings-form-group">
+                        <label for="settingsEmail">Email</label>
+                        <input type="email" id="settingsEmail" class="settings-form-input" placeholder="Enter new email" required aria-required="true">
+                    </div>
+                    <div class="settings-form-group">
+                        <label for="currentPassword">Current Password</label>
+                        <div class="password-container">
+                            <input type="password" id="currentPassword" class="settings-form-input" placeholder="Enter current password">
+                            <button type="button" class="password-toggle" onclick="togglePassword('currentPassword')" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer;" aria-label="Toggle password visibility">👁</button>
+                        </div>
+                    </div>
+                    <div class="settings-form-group">
+                        <label for="newPassword">New Password (leave blank to keep current)</label>
+                        <div class="password-container">
+                            <input type="password" id="newPassword" class="settings-form-input" placeholder="Enter new password">
+                            <button type="button" class="password-toggle" onclick="togglePassword('newPassword')" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer;" aria-label="Toggle password visibility">👁</button>
+                        </div>
+                    </div>
+                    <div class="settings-form-group">
+                        <label for="confirmNewPassword">Confirm New Password</label>
+                        <div class="password-container">
+                            <input type="password" id="confirmNewPassword" class="settings-form-input" placeholder="Confirm new password">
+                            <button type="button" class="password-toggle" onclick="togglePassword('confirmNewPassword')" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer;" aria-label="Toggle password visibility">👁</button>
+                        </div>
+                    </div>
+                    <div class="settings-buttons">
+                        <button type="button" class="cancel-settings-btn pixel-font" id="cancelSettingsBtn">CANCEL</button>
+                        <button type="button" class="save-settings-btn pixel-font" id="saveSettingsBtn">SAVE CHANGES</button>
+                    </div>
+                </form>
+                <div class="danger-zone">
+                    <h3>WARNING</h3>
+                    <p>Once you delete your account, there is no going back. Please be certain.</p>
+                    <button type="button" class="delete-account-btn" id="deleteAccountBtn">🗑️ DELETE ACCOUNT</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Legal Modal -->
+    <div id="legalModal" class="legal-modal" role="dialog" aria-labelledby="legalModalTitle" aria-modal="true">
+        <div class="legal-modal-content">
+            <div class="legal-modal-header">
+                <h2 id="legalModalTitle">Legal Document</h2>
+                <button class="close-legal-modal" id="closeLegalModal" aria-label="Close legal document">&times;</button>
+            </div>
+            <div class="legal-modal-body" id="legalModalContent">
+                <!-- Content will be inserted here by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Main JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
