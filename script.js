@@ -1,11 +1,8 @@
-/**
- * Pantheos RPG - Main JavaScript
- * Organized and Optimized Code
- */
 
-// ===================================
-// CONSTANTS AND CONFIGURATION
-// ===================================
+
+
+
+
 const CONFIG = {
     DEFAULT_AVATAR: 'profile.png',
     BACKGROUND_IMAGES: ['bg.png', 'bg2.png', 'bg3.png', 'bg4.png'],
@@ -18,62 +15,48 @@ const CONFIG = {
     }
 };
 
-// ===================================
-// UTILITY FUNCTIONS
-// ===================================
+
+
+
 const Utils = {
-    /**
-     * Validate email format
-     */
+    
     isValidEmail(email) {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);
     },
 
-    /**
-     * Show alert with custom styling (can be replaced with toast notifications)
-     */
+    
     showAlert(message) {
         alert(message);
     },
 
-    /**
-     * Show confirmation dialog
-     */
+    
     showConfirm(message) {
         return confirm(message);
     },
 
-    /**
-     * Show prompt dialog
-     */
+    
     showPrompt(message) {
         return prompt(message);
     }
 };
 
-// ===================================
-// LOCAL STORAGE MANAGEMENT
-// ===================================
+
+
+
 const Storage = {
-    /**
-     * Get all registered accounts
-     */
+    
     getAllAccounts() {
         const accounts = localStorage.getItem(CONFIG.STORAGE_KEYS.ACCOUNTS);
         return accounts ? JSON.parse(accounts) : [];
     },
 
-    /**
-     * Save all accounts
-     */
+    
     saveAllAccounts(accounts) {
         localStorage.setItem(CONFIG.STORAGE_KEYS.ACCOUNTS, JSON.stringify(accounts));
     },
 
-    /**
-     * Find account by username or email
-     */
+    
     findAccount(usernameOrEmail) {
         const accounts = this.getAllAccounts();
         return accounts.find(acc => 
@@ -82,9 +65,7 @@ const Storage = {
         );
     },
 
-    /**
-     * Get current user session
-     */
+    
     getCurrentUser() {
         const savedUser = localStorage.getItem(CONFIG.STORAGE_KEYS.USER);
         if (savedUser) {
@@ -98,24 +79,20 @@ const Storage = {
         return null;
     },
 
-    /**
-     * Save current user session
-     */
+    
     saveCurrentUser(userData) {
         localStorage.setItem(CONFIG.STORAGE_KEYS.USER, JSON.stringify(userData));
     },
 
-    /**
-     * Clear current user session
-     */
+    
     clearCurrentUser() {
         localStorage.removeItem(CONFIG.STORAGE_KEYS.USER);
     }
 };
 
-// ===================================
-// NAVIGATION AND SCROLL MANAGEMENT
-// ===================================
+
+
+
 const Navigation = {
     init() {
         this.setupSmoothScrolling();
@@ -129,13 +106,13 @@ const Navigation = {
                 e.preventDefault();
                 const target = document.querySelector(anchor.getAttribute('href'));
                 if (target) {
-                    // Update active state immediately
+                    
                     document.querySelectorAll('.nav-links a').forEach(link => {
                         link.classList.remove('active');
                     });
                     anchor.classList.add('active');
                     
-                    // Calculate scroll position
+                    
                     const header = document.querySelector('.header');
                     const headerHeight = header.offsetHeight;
                     const targetPosition = target.offsetTop - headerHeight - 20;
@@ -173,7 +150,7 @@ const Navigation = {
         };
 
         window.addEventListener('scroll', updateActiveNav);
-        updateActiveNav(); // Set initial active state
+        updateActiveNav(); 
     },
 
     setupHeaderScrollEffect() {
@@ -190,9 +167,9 @@ const Navigation = {
     }
 };
 
-// ===================================
-// ANIMATION MANAGEMENT
-// ===================================
+
+
+
 const Animations = {
     init() {
         this.setupLoadingAnimations();
@@ -220,7 +197,7 @@ const Animations = {
             observer.observe(el);
         });
 
-        // Initial hero animation
+        
         setTimeout(() => {
             const heroContent = document.querySelector('.hero-content');
             if (heroContent) {
@@ -300,9 +277,9 @@ const Animations = {
     }
 };
 
-// ===================================
-// MODAL MANAGEMENT
-// ===================================
+
+
+
 const ModalManager = {
     init() {
         this.setupLoginModal();
@@ -321,7 +298,7 @@ const ModalManager = {
         const loginForm = document.getElementById('loginForm');
         const signupForm = document.getElementById('signupForm');
 
-        // Open modal
+        
         if (loginBtn) {
             loginBtn.addEventListener('click', (e) => {
                 e.preventDefault();
@@ -329,14 +306,14 @@ const ModalManager = {
             });
         }
 
-        // Close modal when clicking outside
+        
         window.addEventListener('click', (e) => {
             if (e.target === modal) {
                 modal.style.display = 'none';
             }
         });
 
-        // Tab switching
+        
         loginTab.addEventListener('click', () => {
             loginTab.classList.add('active');
             loginTab.classList.remove('inactive');
@@ -384,7 +361,7 @@ const ModalManager = {
             loginModal.style.display = 'block';
         });
 
-        // Close when clicking outside
+        
         window.addEventListener('click', (e) => {
             if (e.target === forgotPasswordModal) {
                 forgotPasswordModal.style.display = 'none';
@@ -413,7 +390,7 @@ const ModalManager = {
             profileSettingsModal.style.display = 'none';
         });
 
-        // Close when clicking outside
+        
         window.addEventListener('click', (e) => {
             if (e.target === profileSettingsModal) {
                 profileSettingsModal.style.display = 'none';
@@ -435,7 +412,7 @@ const ModalManager = {
             }
         });
 
-        // Setup legal links
+        
         document.querySelectorAll('.footer-column a[href="#"]').forEach(link => {
             const text = link.textContent.trim();
             if (text === 'Terms of Service') {
@@ -456,7 +433,7 @@ const ModalManager = {
             }
         });
 
-        // Setup TOS and Privacy links in signup form
+        
         document.getElementById('tosLink').addEventListener('click', (e) => {
             e.preventDefault();
             e.stopPropagation();
@@ -485,7 +462,7 @@ const ModalManager = {
             }
         };
 
-        // Add tooltips
+        
         document.querySelectorAll('.password-toggle').forEach(toggle => {
             toggle.title = 'Show password';
             toggle.style.cursor = 'pointer';
@@ -494,7 +471,7 @@ const ModalManager = {
     },
 
     setupKeyboardSupport() {
-        // Login form Enter key support
+        
         const loginInputs = document.querySelectorAll('#loginForm input');
         loginInputs.forEach(input => {
             input.addEventListener('keypress', (e) => {
@@ -505,7 +482,7 @@ const ModalManager = {
             });
         });
 
-        // Signup form Enter key support
+        
         const signupInputs = document.querySelectorAll('#signupForm input[type="text"], #signupForm input[type="email"], #signupForm input[type="password"]');
         signupInputs.forEach(input => {
             input.addEventListener('keypress', (e) => {
@@ -516,10 +493,10 @@ const ModalManager = {
             });
         });
 
-        // General keyboard navigation
+        
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') {
-                // Close any open modals
+                
                 document.getElementById('loginModal').style.display = 'none';
                 document.getElementById('forgotPasswordModal').style.display = 'none';
                 document.getElementById('profileSettingsModal').style.display = 'none';
@@ -529,16 +506,16 @@ const ModalManager = {
     }
 };
 
-// ===================================
-// AUTHENTICATION MANAGEMENT
-// ===================================
+
+
+
 const AuthManager = {
     handleLogin() {
         const usernameOrEmail = document.getElementById('loginUsername').value.trim();
         const password = document.getElementById('loginPassword').value;
         const loginBtn = document.querySelector('#loginForm .modal-btn');
 
-        // Validation
+        
         if (!usernameOrEmail) {
             Utils.showAlert('Please enter your username or email!');
             document.getElementById('loginUsername').focus();
@@ -557,7 +534,7 @@ const AuthManager = {
             return;
         }
 
-        // Check if account exists
+        
         const account = Storage.findAccount(usernameOrEmail);
         
         if (!account) {
@@ -566,14 +543,14 @@ const AuthManager = {
             return;
         }
 
-        // Verify password
+        
         if (account.password !== password) {
             Utils.showAlert('Incorrect password! Please try again.');
             document.getElementById('loginPassword').focus();
             return;
         }
 
-        // Login process
+        
         loginBtn.textContent = 'Logging in...';
         loginBtn.disabled = true;
         loginBtn.style.backgroundColor = '#9ca3af';
@@ -585,14 +562,14 @@ const AuthManager = {
             setTimeout(() => {
                 document.getElementById('loginModal').style.display = 'none';
 
-                // Reset form
+                
                 document.getElementById('loginUsername').value = '';
                 document.getElementById('loginPassword').value = '';
                 loginBtn.textContent = 'LOGIN';
                 loginBtn.disabled = false;
                 loginBtn.style.backgroundColor = '#FAA53C';
 
-                // Update UI
+                
                 ProfileManager.showUserProfile(account.username, account.profilePic, account.email);
             }, 1000);
         }, 1500);
@@ -606,7 +583,7 @@ const AuthManager = {
         const termsChecked = document.getElementById('termsCheckbox').checked;
         const signupBtn = document.querySelector('#signupForm .modal-btn');
 
-        // Validation
+        
         if (!username) {
             Utils.showAlert('Please enter a username!');
             document.getElementById('signupUsername').focus();
@@ -661,7 +638,7 @@ const AuthManager = {
             return;
         }
 
-        // Check if username already exists
+        
         const existingAccount = Storage.findAccount(username);
         if (existingAccount) {
             Utils.showAlert('Username already exists! Please choose a different username.');
@@ -669,7 +646,7 @@ const AuthManager = {
             return;
         }
 
-        // Check if email already exists
+        
         const accounts = Storage.getAllAccounts();
         const emailExists = accounts.find(acc => acc.email.toLowerCase() === email.toLowerCase());
         if (emailExists) {
@@ -678,13 +655,13 @@ const AuthManager = {
             return;
         }
 
-        // Signup process
+        
         signupBtn.textContent = 'Creating Account...';
         signupBtn.disabled = true;
         signupBtn.style.backgroundColor = '#9ca3af';
 
         setTimeout(() => {
-            // Create new account
+            
             const newAccount = {
                 username: username,
                 email: email,
@@ -702,7 +679,7 @@ const AuthManager = {
             setTimeout(() => {
                 Utils.showAlert(`Welcome to Pantheos, ${username}! Your account has been created successfully. You can now log in with your credentials.`);
 
-                // Switch to login tab
+                
                 document.getElementById('loginTab').classList.add('active');
                 document.getElementById('loginTab').classList.remove('inactive');
                 document.getElementById('signupTab').classList.add('inactive');
@@ -710,11 +687,11 @@ const AuthManager = {
                 document.getElementById('loginForm').style.display = 'block';
                 document.getElementById('signupForm').style.display = 'none';
 
-                // Pre-fill login username
+                
                 document.getElementById('loginUsername').value = username;
                 document.getElementById('loginPassword').focus();
 
-                // Reset signup form
+                
                 document.getElementById('signupUsername').value = '';
                 document.getElementById('signupEmail').value = '';
                 document.getElementById('signupPassword').value = '';
@@ -731,12 +708,12 @@ const AuthManager = {
         const signupBtn = document.querySelector('#signupForm .modal-btn');
         const termsCheckbox = document.getElementById('termsCheckbox');
         
-        // Initially disable signup button
+        
         signupBtn.disabled = true;
         signupBtn.style.opacity = '0.5';
         signupBtn.style.cursor = 'not-allowed';
 
-        // Enable/disable based on checkbox
+        
         termsCheckbox.addEventListener('change', function() {
             if (this.checked) {
                 signupBtn.disabled = false;
@@ -751,13 +728,13 @@ const AuthManager = {
     }
 };
 
-// Make functions globally accessible for inline onclick handlers
+
 window.handleLogin = () => AuthManager.handleLogin();
 window.handleSignup = () => AuthManager.handleSignup();
 
-// ===================================
-// PASSWORD RESET MANAGEMENT
-// ===================================
+
+
+
 const PasswordResetManager = {
     resetEmail: '',
 
@@ -843,7 +820,7 @@ const PasswordResetManager = {
                 accounts[accountIndex].password = newPassword;
                 Storage.saveAllAccounts(accounts);
             } else {
-                // Create new account (prototype mode)
+                
                 const newAccount = {
                     username: this.resetEmail.split('@')[0],
                     email: this.resetEmail,
@@ -862,7 +839,7 @@ const PasswordResetManager = {
                 document.getElementById('forgotPasswordModal').style.display = 'none';
                 document.getElementById('loginModal').style.display = 'block';
                 
-                // Reset form
+                
                 document.getElementById('forgotEmail').value = '';
                 document.getElementById('verificationCode').value = '';
                 document.getElementById('newPasswordReset').value = '';
@@ -878,9 +855,9 @@ const PasswordResetManager = {
     }
 };
 
-// ===================================
-// PROFILE MANAGEMENT
-// ===================================
+
+
+
 const ProfileManager = {
     currentUser: {
         username: '',
@@ -912,7 +889,7 @@ const ProfileManager = {
             this.currentUser.profilePic = profilePic;
         }
         
-        // Save session
+        
         Storage.saveCurrentUser({
             username: username,
             email: email,
@@ -920,7 +897,7 @@ const ProfileManager = {
             isLoggedIn: true
         });
         
-        // Update UI
+        
         document.querySelector('.login-btn').style.display = 'none';
         document.getElementById('userProfileContainer').classList.add('active');
         document.getElementById('dropdownUsername').textContent = username;
@@ -980,7 +957,7 @@ const ProfileManager = {
             const newPassword = document.getElementById('newPassword').value;
             const confirmNewPassword = document.getElementById('confirmNewPassword').value;
 
-            // Validation
+            
             if (!newUsername || newUsername.length < 3) {
                 document.getElementById('settingsUsername').focus();
                 return;
@@ -998,13 +975,13 @@ const ProfileManager = {
                 }
             }
 
-            // Save process
+            
             saveBtn.textContent = 'SAVING...';
             saveBtn.disabled = true;
             saveBtn.style.backgroundColor = '#9ca3af';
 
             setTimeout(() => {
-                // Update account
+                
                 const accounts = Storage.getAllAccounts();
                 const accountIndex = accounts.findIndex(acc => 
                     acc.username.toLowerCase() === this.currentUser.username.toLowerCase()
@@ -1019,7 +996,7 @@ const ProfileManager = {
                     Storage.saveAllAccounts(accounts);
                 }
                 
-                // Apply pending profile picture
+                
                 if (this.pendingProfilePic) {
                     this.currentUser.profilePic = this.pendingProfilePic;
                     document.getElementById('headerProfilePic').src = this.pendingProfilePic;
@@ -1030,7 +1007,7 @@ const ProfileManager = {
                 this.currentUser.email = newEmail;
                 document.getElementById('dropdownUsername').textContent = newUsername;
                 
-                // Update session
+                
                 Storage.saveCurrentUser({
                     username: newUsername,
                     email: newEmail,
@@ -1044,7 +1021,7 @@ const ProfileManager = {
                 setTimeout(() => {
                     document.getElementById('profileSettingsModal').style.display = 'none';
                     
-                    // Reset password fields
+                    
                     document.getElementById('currentPassword').value = '';
                     document.getElementById('newPassword').value = '';
                     document.getElementById('confirmNewPassword').value = '';
@@ -1108,7 +1085,7 @@ const ProfileManager = {
                             deleteBtn.textContent = 'ACCOUNT DELETED';
                             deleteBtn.style.backgroundColor = '#991b1b';
                             
-                            // Remove account
+                            
                             const accounts = Storage.getAllAccounts();
                             const updatedAccounts = accounts.filter(acc => 
                                 acc.username.toLowerCase() !== username.toLowerCase()
@@ -1148,9 +1125,9 @@ const ProfileManager = {
     }
 };
 
-// ===================================
-// LEGAL CONTENT MANAGEMENT
-// ===================================
+
+
+
 const LegalContent = {
     content: {
         tos: {
@@ -1242,9 +1219,9 @@ const LegalContent = {
     }
 };
 
-// ===================================
-// INTERACTIVE FEATURES
-// ===================================
+
+
+
 const InteractiveFeatures = {
     init() {
         this.setupDownloadButton();
@@ -1260,20 +1237,12 @@ const InteractiveFeatures = {
                 e.preventDefault();
 
                 const originalText = this.textContent;
-                
-                // GitHub release download URL
-                // Update this URL when you create a release
                 const downloadUrl = 'https://github.com/saladnigek/PAN/releases/latest/download/pantheos-game.zip';
-                
-                // Check if release exists (for demo, we'll simulate)
-                const hasRelease = true; // Set to true when you upload a release
+                const hasRelease = true;
                 
                 if (hasRelease) {
-                    // Real download
                     this.textContent = 'Starting Download...';
                     this.style.backgroundColor = '#10b981';
-                    
-                    // Trigger download
                     window.location.href = downloadUrl;
                     
                     setTimeout(() => {
@@ -1286,7 +1255,6 @@ const InteractiveFeatures = {
                         }, 2000);
                     }, 500);
                 } else {
-                    // Demo mode - simulate download
                     this.textContent = 'Preparing Download...';
                     this.style.backgroundColor = '#10b981';
 
@@ -1294,7 +1262,6 @@ const InteractiveFeatures = {
                         this.textContent = 'Download Ready!';
                         this.style.backgroundColor = '#059669';
                         
-                        // Show info about release
                         setTimeout(() => {
                             Utils.showAlert('Game client will be available soon!\n\nCheck the GitHub releases page:\nhttps://github.com/saladnigek/PAN/releases');
                             this.textContent = originalText;
@@ -1358,11 +1325,11 @@ const InteractiveFeatures = {
     }
 };
 
-// ===================================
-// INITIALIZATION
-// ===================================
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
-    // Initialize all modules
+    
     Navigation.init();
     Animations.init();
     ModalManager.init();

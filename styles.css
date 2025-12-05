@@ -1,9 +1,6 @@
-/* ===================================
-   Pantheos RPG - Main Stylesheet
-   Organized and Optimized CSS
-   =================================== */
 
-/* === BASE STYLES === */
+
+
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +8,7 @@
 }
 
 :root {
-    /* Color Palette */
+    
     --primary-blue: #3985C1;
     --primary-orange: #FAA53C;
     --accent-blue: #2563eb;
@@ -24,18 +21,18 @@
     --error-red: #ef4444;
     --white: #ffffff;
     
-    /* Typography */
+    
     --font-primary: 'Roboto', sans-serif;
     --font-pixel: 'Press Start 2P', monospace;
     
-    /* Spacing */
+    
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;
     --spacing-md: 1.5rem;
     --spacing-lg: 2rem;
     --spacing-xl: 3rem;
     
-    /* Transitions */
+    
     --transition-fast: 0.2s ease;
     --transition-normal: 0.3s ease;
     --transition-slow: 0.6s ease;
@@ -56,7 +53,7 @@ body {
     font-family: var(--font-pixel);
 }
 
-/* === HEADER STYLES === */
+
 .header {
     background-color: var(--primary-blue);
     padding: var(--spacing-sm) 0;
@@ -136,7 +133,7 @@ body {
     margin-right: 0.3rem;
 }
 
-/* === USER PROFILE DROPDOWN === */
+
 .user-profile-container {
     position: relative;
     display: none;
@@ -264,7 +261,7 @@ body {
     background-color: #fee2e2;
 }
 
-/* === HERO SECTION === */
+
 .hero {
     background: url('bg.png') center center no-repeat;
     background-size: cover;
@@ -342,7 +339,7 @@ body {
     outline: 2px solid var(--primary-orange);
 }
 
-/* === SECTION STYLES === */
+
 .section {
     padding: var(--spacing-lg);
     max-width: 1200px;
@@ -390,7 +387,7 @@ body {
     font-size: 1rem;
 }
 
-/* === GAME OVERVIEW === */
+
 .overview-content {
     display: grid;
     grid-template-columns: 1fr;
@@ -451,7 +448,7 @@ body {
     font-weight: 600;
 }
 
-/* === DOWNLOAD SECTION === */
+
 .download-content {
     text-align: center;
 }
@@ -512,7 +509,7 @@ body {
     color: #1f2937;
 }
 
-/* === NEWS SECTION === */
+
 .news-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -621,7 +618,7 @@ body {
     transform: scale(1.02);
 }
 
-/* === CONTACT SECTION === */
+
 .contact-container {
     background: var(--bg-light);
     border: 1px solid #e2e8f0;
@@ -758,7 +755,7 @@ body {
     outline: 2px solid var(--primary-orange);
 }
 
-/* === FOOTER === */
+
 .footer {
     background: var(--white);
     border-top: 2px solid var(--border-gray);
@@ -868,7 +865,7 @@ body {
     border-top: 1px solid var(--border-gray);
 }
 
-/* === MODAL STYLES === */
+
 .modal,
 .legal-modal,
 .profile-settings-modal {
@@ -1090,7 +1087,7 @@ body {
     justify-content: center;
 }
 
-/* === PROFILE SETTINGS MODAL === */
+
 .profile-settings-content {
     background-color: var(--white);
     margin: 3% auto;
@@ -1266,7 +1263,7 @@ body {
     outline: 2px solid #991b1b;
 }
 
-/* === LEGAL MODAL === */
+
 .legal-modal-content {
     background-color: var(--white);
     margin: 3% auto;
@@ -1342,7 +1339,7 @@ body {
     font-size: 0.95rem;
 }
 
-/* === ANIMATIONS === */
+
 .loading {
     opacity: 0;
     transform: translateY(20px);
@@ -1374,7 +1371,7 @@ body {
     }
 }
 
-/* === RESPONSIVE DESIGN === */
+
 @media (max-width: 768px) {
     .header-container {
         flex-direction: column;
@@ -1460,8 +1457,8 @@ body {
     }
 }
 
-/* === ACCESSIBILITY IMPROVEMENTS === */
-/* Screen reader only class */
+
+
 .sr-only {
     position: absolute;
     width: 1px;
@@ -1485,13 +1482,13 @@ body {
     }
 }
 
-/* Focus visible for keyboard navigation */
+
 *:focus-visible {
     outline: 2px solid var(--primary-orange);
     outline-offset: 2px;
 }
 
-/* Skip to main content link for accessibility */
+
 .skip-to-main {
     position: absolute;
     left: -9999px;
@@ -1508,7 +1505,7 @@ body {
     top: var(--spacing-sm);
 }
 
-/* High contrast mode support */
+
 @media (prefers-contrast: high) {
     .header,
     .modal-content,
