@@ -1263,10 +1263,10 @@ const InteractiveFeatures = {
                 
                 // GitHub release download URL
                 // Update this URL when you create a release
-                const downloadUrl = 'https://github.com/saladnigek/PAN/releases/latest/download/PantheosRPG-Client.zip';
+                const downloadUrl = 'https://github.com/saladnigek/PAN/releases/latest/download/pantheos-game.zip';
                 
                 // Check if release exists (for demo, we'll simulate)
-                const hasRelease = false; // Set to true when you upload a release
+                const hasRelease = true; // Set to true when you upload a release
                 
                 if (hasRelease) {
                     // Real download
